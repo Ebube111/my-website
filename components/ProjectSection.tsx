@@ -36,13 +36,13 @@ const ProjectSection = () => {
           Projects / Working Experience
           <hr className="w-12 h-1 mx-auto my-4 bg-purple-500 border-0 rounded"></hr>
         </h1>
-        <div className="flex flex-col space-y-14 md:px-32 ">
+        <div className="flex flex-col space-y-14 md:px-8 ">
           {projects.map((project, idx) => {
             return (
               <div key={idx}>
                 <SlideUp offset="-300px 0px -300px 0px">
-                  <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                    <div className=" md:w-1/2">
+                  <div className="flex mt-12 flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+                    <div className=" sm:px-8 md:w-1/2">
                       <Link href={project.link}>
                         <Image
                           src={project.image}
@@ -53,7 +53,7 @@ const ProjectSection = () => {
                         />
                       </Link>
                     </div>
-                    <div className="mt-8 md:w-1/2 mx-2">
+                    <div className="md:w-1/2 mx-2 my-2">
                       <h1 className="text-4xl font-bold mb-6">
                         {project.name}
                       </h1>

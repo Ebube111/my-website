@@ -8,10 +8,10 @@ const HeroSection = () => {
   return (
     <section id="home">
       <div className="flex flex-col md:mb-44 text-center items-center justify-center animate-fadeIn animation-delay-2 px-6 my-10 py-16 sm:py-18 md:py-48 md:flex-row md:space-x-4 md:text-left">
-        <div className="md:mt-2  md:ml-60 md:w-1/3">
+        <div className="md:mt-2 md:ml-60 md:w-1/3">
           <Image
-            className="rounded-full  shadow-2xl"
-            src="/me.jpeg"
+            className="rounded-full bg-black shadow-2xl"
+            src="/thisme.png"
             alt=""
             width={300}
             height={300}
@@ -26,7 +26,7 @@ const HeroSection = () => {
             <span className="font-semibold text-purple-600">
               Software Engineer{" "}
             </span>
-            based in Nigeria. Building products in web2 and web3 that makes life
+            based in Nigeria. Building products in Web2 and Web3 that makes life
             easier and more meaningful
           </p>
           <Link
