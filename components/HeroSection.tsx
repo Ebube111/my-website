@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="md:mt-2 md:ml-60 md:w-1/3">
           <Image
             className="rounded-full bg-black shadow-2xl"
-            src="/thisme.png"
+            src="/me.jpg"
             alt=""
             width={300}
             height={300}
