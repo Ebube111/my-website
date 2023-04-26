@@ -9,12 +9,10 @@ const HeroSection = () => {
     <section id="home">
       <div className="flex flex-col md:mb-44 text-center items-center justify-center animate-fadeIn animation-delay-2 px-6 my-10 py-16 sm:py-18 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:ml-60 md:w-1/3">
-          <Image
+          <img
             className="rounded-full bg-black shadow-2xl"
-            src="/me.jpg"
+            src="/me_c.JPG"
             alt=""
-            width={300}
-            height={300}
           />
         </div>
         <div className="md:mt-2 md:w-2/3 ">
@@ -31,7 +29,7 @@ const HeroSection = () => {
           </p>
           <Link
             to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700"
+            className="text-neutral-100 cursor-pointer font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700"
             activeClass="active"
             spy={true}
             smooth={true}
