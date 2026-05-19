@@ -1,49 +1,18 @@
-import React from "react";
-import {
-  AiOutlineGithub,
-  AiOutlineTwitter,
-  AiOutlineLinkedin,
-} from "react-icons/ai";
+import { profile } from "@/data/userData";
 
 const Footer = () => {
   return (
-    <footer className="mt-32 mx-auto max-w-3xl px-4 sm:px-6  ">
-      <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
-      <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
-        <div className="flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100">
-          © 2023 Ebube Agwaze<a href="/" className="hover:underline"></a>
-        </div>
-        <div className="flex flex-row items-center justify-center space-x-2 mb-1">
-          <a
-            href="https://github.com/Ebube111"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineGithub
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
-          </a>
-          <a
-            href="https://twitter.com/Busko_57"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineTwitter
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/ebube-agwaze-375a771b8/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineLinkedin
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
+    <footer className="border-t border-zinc-200 bg-white">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 text-sm text-zinc-600 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
+        <p>© {new Date().getFullYear()} {profile.name}. Built with Next.js.</p>
+        <div className="flex flex-wrap gap-4">
+          {profile.socials.map((social) => (
+            <a key={social.label} className="footer-link" href={social.href} target="_blank" rel="noreferrer">
+              {social.label}
+            </a>
+          ))}
+          <a className="footer-link" href={`mailto:${profile.email}`}>
+            Email
           </a>
         </div>
       </div>

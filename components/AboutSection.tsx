@@ -1,81 +1,40 @@
-import React from "react";
-
-const skills = [
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "JavaScript" },
-  { skill: "React" },
-  { skill: "Next.js" },
-  { skill: "TypeScript" },
-  { skill: "GraphQL" },
-  { skill: "Solidity" },
-  { skill: "Rust" },
-  { skill: "Tailwind CSS" },
-];
+import { principles, profile } from "@/data/userData";
+import Reveal from "./Reveal";
 
 const AboutSection = () => {
   return (
-    <section id="about">
-      <div className="my-12 mx-2 md:px-20 pb-12 md:pt-16 md:pb-48">
-        <h1 className="text-center font-bold text-4xl">
-          About me
-          <hr className="w-6 h-1 mx-auto my-4 bg-purple-500 border-0 rounded"></hr>
-        </h1>
-        <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="md:w-1/2 ">
-            <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
-              Get to know me!
-            </h1>
-            <p>
-              Hi, my name is Ebube Agwaze and I am a{" "}
-              <span className="font-bold">{"highly ambitious"}</span>,
-              <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> software engineer
-              based in Nigeria.
-            </p>
-            <br />
-            <p>
-              I am a passionate JavaScript developer with over 3 years of
-              experience working with React and TypeScript with other
-              technologies, as well as experience in building web3 products as
-              well. Successful at operating in both self-directed and team-based
-              capacities, bringing expertise in project management.
-            </p>
-            <br />
-            <p>
-              I believe that you should{" "}
-              <span className="font-bold text-purple-500">
-                never stop growing
-              </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
-              technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and I'm
-              always open to new technologies. 🙂
-            </p>
-            <br />
-            <p>
-              I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, traveling. I am always seeking new
-              experiences and love to keep myself engaged and learning new
-              things.
-            </p>
+    <section id="about" className="section-shell">
+      <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <Reveal>
+          <p className="eyebrow">Engineering profile</p>
+          <h2 className="section-title mt-4">Software engineer focused on product execution, scalable interfaces, and reliable delivery.</h2>
+        </Reveal>
+
+        <Reveal className="space-y-6 text-base leading-8 text-zinc-600 sm:text-lg" delay={120}>
+          <p>
+            I am {profile.name}, a software engineer with over five years of experience building
+            production-grade applications across web, mobile, and API-connected systems. My work
+            spans customer-facing products, internal platforms, admin workflows, backend
+            integrations, and database-backed features that need to perform reliably in real usage.
+          </p>
+          <p>
+            I bring a practical engineering style: clarify the product intent, design clean
+            frontend architecture, align with backend constraints, and ship interfaces that remain
+            maintainable as requirements evolve. I care about implementation quality, but I measure
+            it by what it enables for users, teams, and the business after release.
+          </p>
+
+          <div className="grid gap-3 pt-4">
+            {principles.map((principle, index) => (
+              <Reveal key={principle} delay={180 + index * 90}>
+                <div className="principle-row">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-emerald-500" />
+                  <p>{principle}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-          <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Skills</h1>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
-                return (
-                  <p
-                    key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
-                  >
-                    {item.skill}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

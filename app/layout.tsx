@@ -1,10 +1,6 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
-import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import Head from "./head";
 import Footer from "@/components/Footer";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -13,13 +9,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head />
-      <body className="dark:bg-stone-900">
-        <ThemeProvider enableSystem={true} attribute="class">
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
