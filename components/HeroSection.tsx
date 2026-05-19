@@ -32,7 +32,7 @@ const deliverySignals = [
 const HeroSection = () => {
   return (
     <section id="home" className="section-shell pt-32 sm:pt-36">
-      <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+      <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="animate-rise">
           <p className="eyebrow">Lead engineer / web / mobile / APIs</p>
           <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.02] text-zinc-950 sm:text-6xl lg:text-7xl">
@@ -158,8 +158,8 @@ const HeroSection = () => {
         {proofPoints.map((point, index) => (
           <Reveal key={point.value} delay={index * 90}>
             <div className="metric-card">
-            <p className="text-2xl font-semibold text-zinc-950">{point.value}</p>
-            <p className="mt-2 text-sm leading-6 text-zinc-600">{point.label}</p>
+              <p className="text-2xl font-semibold text-zinc-950">{point.value}</p>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">{point.label}</p>
             </div>
           </Reveal>
         ))}

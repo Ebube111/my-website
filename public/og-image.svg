@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Ebube Agwaze portfolio preview">
+  <rect width="1200" height="630" fill="#f8faf7"/>
+  <circle cx="1020" cy="90" r="220" fill="#d1fae5" opacity=".7"/>
+  <rect x="74" y="74" width="1052" height="482" rx="44" fill="#09090b"/>
+  <text x="126" y="168" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="10">SOFTWARE ENGINEER</text>
+  <text x="126" y="286" fill="#ffffff" font-family="Arial, sans-serif" font-size="82" font-weight="700">Ebube Agwaze</text>
+  <text x="126" y="365" fill="#d4d4d8" font-family="Arial, sans-serif" font-size="38">Web, mobile, APIs, and database-backed products.</text>
+  <rect x="126" y="438" width="360" height="62" rx="31" fill="#6ee7b7"/>
+  <text x="162" y="480" fill="#09090b" font-family="Arial, sans-serif" font-size="26" font-weight="700">ebubeagwaze@gmail.com</text>
+  <rect x="914" y="132" width="132" height="132" rx="32" fill="#18181b"/>
+  <text x="942" y="220" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="58" font-weight="800">EA</text>
+</svg>
