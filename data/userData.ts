@@ -46,7 +46,7 @@ export const expertise = [
     title: "Backend integration",
     description:
       "I am comfortable shaping frontend work around REST APIs, GraphQL, authentication flows, database-backed features, and the tradeoffs that show up when systems meet real users.",
-    skills: ["REST APIs", "GraphQL", "Node.js", "Databases", "Auth flows"],
+    skills: ["REST APIs", "GraphQL", "Node.js", "Databases", "Auth flows", "Blockchain"],
   },
   {
     title: "Engineering leadership",
@@ -58,38 +58,45 @@ export const expertise = [
 
 export const projects = [
   {
-    name: "GenaDrop",
-    role: "Frontend and blockchain engineering",
-    image: "/genadrop.png",
-    href: "https://genadrop.com",
+    name: "Bible Paddy",
+    role: "Founding Full Stack Engineer",
+    image: "/biblepaddy.png",
+    href: "https://biblepaddy.com/",
+    links: [
+      { label: "Website", href: "https://biblepaddy.com/" },
+      { label: "App Store", href: "https://apps.apple.com/ng/app/bible-paddy/id6759342046" },
+      { label: "Play Store", href: "https://play.google.com/store/apps/details?id=com.biblepaddy" },
+    ],
     description:
-      "Worked on a multi-chain generative NFT minting platform and marketplace, building product surfaces, marketplace NFT integrations, indexing support, and NEAR contract integration work.",
+      "Founded and built Bible Paddy end to end, owning the product vision, technical architecture, backend foundations, mobile experience, and release lifecycle from idea to production.",
     impact:
-      "Helped connect a no-code creation workflow to real blockchain infrastructure while keeping the product approachable for creators.",
-    stack: ["React", "Subgraph indexing", "NEAR", "Rust", "Marketplace UX"],
+      "Successfully launched the app on both iOS and Android, shipping a high-performance React Native and TypeScript experience with large Bible datasets, AI-driven chat features, Firebase-powered deep-linked notifications, and a branded content-sharing engine that generates social assets from app data.",
+    stack: ["React Native", "TypeScript", "Firebase", "AI chat", "Mobile release", "iOS", "Android"],
   },
   {
     name: "Daba Finance",
-    role: "Frontend engineering",
+    role: "Lead Frontend Engineer",
     image: "/daba.png",
     href: "https://dabafinance.com",
     description:
-      "Built internal admin product experiences for a fintech platform focused on African startups, IPOs, and stock investing, working closely with GraphQL data and team delivery flows.",
+      "Led the web frontend architecture and delivery of internal admin products for a fintech platform focused on African startups, IPOs, and stock investing, built the app's news section, and resolved SEO challenges around page indexing while aligning GraphQL data models with scalable, maintainable interfaces.",
     impact:
-      "Contributed to tools that make investment operations easier to manage behind the scenes.",
-    stack: ["React", "GraphQL", "Admin systems", "Fintech UX"],
+      "Improved operational efficiency for investment teams by shipping reliable internal tools that reduced manual workflows, increased visibility across investment data, and supported faster decision-making.",
+    stack: ["React", "GraphQL", "TypeScript", "Wordpress", "Next.js"],
   },
   {
-    name: "Minority Programmers Association",
-    role: "Frontend engineering",
-    image: "/mpa.png",
-    href: "https://minorityprogrammers.com",
+    name: "Potlock",
+    role: "Web3 Senior Frontend Engineer",
+    image: "/potlock.svg",
+    href: "https://app.potlock.org/",
     description:
-      "Built application interfaces for an international developer network focused on socially impactful software, STEM education, and Web3 community programs.",
+      "Worked on Potlock's multi-chain donation and public-goods funding platform, building campaign experiences that help projects raise funds, receive direct donations, and participate in quadratic funding pots across NEAR, EVM-compatible chains, and Solana.",
     impact:
-      "Helped ship product features for a distributed community and education platform.",
-    stack: ["Next.js", "Tailwind CSS", "REST APIs", "Team delivery"],
+      "Built complex donation allocation flows with full, proportional-share, and group-distribution strategies, supporting fungible and native tokens, fee handling, multicall transaction batching, wallet integrations, real-time transaction status tracking, and DAO proposal workflows.",
+    stack: ["React", "TypeScript", "NEAR", "EVM", "Solana", "Web3Modal", "Wagmi", "Blockchain"],
   },
+  
+
 ];
 
 export const principles = [

@@ -16,7 +16,6 @@ export default function Head() {
       <meta name="theme-color" content="#f8faf7" />
       <link rel="canonical" href="https://ebubeagwaze.com" />
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      <link rel="alternate icon" href="/favicon.ico" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Ebube Agwaze | Software Engineer" />
       <meta

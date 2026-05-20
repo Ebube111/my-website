@@ -53,13 +53,15 @@ body {
   }
 }
 
-@keyframes progress {
-  from {
-    transform: scaleX(0);
+@keyframes blink {
+  0%,
+  45% {
+    opacity: 1;
   }
 
-  to {
-    transform: scaleX(1);
+  46%,
+  100% {
+    opacity: 0;
   }
 }
 
@@ -151,29 +153,42 @@ body {
     @apply relative mx-auto w-full max-w-xl;
   }
 
-  .console-row {
-    @apply flex gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-4;
+  .terminal-window {
+    @apply relative overflow-hidden rounded-[1.75rem] border border-zinc-800 bg-[#08090b] text-white shadow-2xl shadow-zinc-300/80;
   }
 
-  .progress-track {
-    @apply h-2 overflow-hidden rounded-full bg-white/10;
+  .terminal-window::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[length:100%_28px] opacity-40;
   }
 
-  .progress-fill {
-    @apply block h-full origin-left rounded-full bg-emerald-300;
-    animation: progress 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  .terminal-line {
+    @apply flex min-w-0 items-center gap-2 text-zinc-300;
   }
 
-  .mini-stat {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-4;
+  .terminal-prompt {
+    @apply shrink-0 text-emerald-300;
   }
 
-  .mini-stat p {
-    @apply text-lg font-semibold text-white;
+  .terminal-command {
+    @apply min-w-0 break-words text-zinc-100;
   }
 
-  .mini-stat span {
-    @apply mt-1 block text-xs font-medium text-zinc-400;
+  .terminal-output {
+    @apply mt-2 break-words pl-5 leading-6 text-zinc-400;
+  }
+
+  .terminal-block {
+    @apply border-b border-white/10 py-4 first:pt-0 last:border-b-0 last:pb-0;
+  }
+
+  .terminal-status {
+    @apply flex items-center gap-2 rounded-2xl border border-emerald-300/20 bg-emerald-300/10 px-4 py-3 text-emerald-200;
+  }
+
+  .terminal-cursor {
+    @apply h-4 w-2 rounded-sm bg-emerald-300;
+    animation: blink 1s steps(1, end) infinite;
   }
 
   .animate-rise {

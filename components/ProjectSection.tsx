@@ -51,10 +51,14 @@ const ProjectSection = () => {
                       </span>
                     ))}
                   </div>
-                  <Link className="project-link mt-7" href={project.href} target="_blank">
-                    Visit project
-                    <FiArrowUpRight aria-hidden="true" />
-                  </Link>
+                  <div className="mt-7 flex flex-wrap gap-4">
+                    {(project.links ?? [{ label: "Visit project", href: project.href }]).map((link) => (
+                      <Link key={link.href} className="project-link" href={link.href} target="_blank">
+                        {link.label}
+                        <FiArrowUpRight aria-hidden="true" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </article>

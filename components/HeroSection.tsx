@@ -1,31 +1,28 @@
 import {
   FiArrowRight,
-  FiCheckCircle,
-  FiCode,
-  FiDatabase,
   FiGithub,
   FiLinkedin,
   FiMail,
-  FiSmartphone,
 } from "react-icons/fi";
 import { profile, proofPoints } from "@/data/userData";
 import Reveal from "./Reveal";
 
-const deliverySignals = [
+const terminalLines = [
   {
-    label: "Frontend architecture",
-    value: "React / Next.js / TypeScript",
-    icon: FiCode,
+    command: "profile --role",
+    output: "Software Engineer | Frontend, mobile, APIs",
   },
   {
-    label: "Mobile release flow",
-    value: "Production apps and store delivery",
-    icon: FiSmartphone,
+    command: "stack --focus",
+    output: "React, React Native, TypeScript, Web3, Backend",
   },
   {
-    label: "Backend integration",
-    value: "REST APIs, auth, databases",
-    icon: FiDatabase,
+    command: "ship --scope",
+    output: "Web apps, mobile releases, admin tools, product systems",
+  },
+  {
+    command: "quality --check",
+    output: "Performance, accessibility, error states, release readiness",
   },
 ];
 
@@ -70,77 +67,46 @@ const HeroSection = () => {
           <div className="pointer-events-none absolute -left-8 top-10 hidden h-24 w-24 border border-emerald-200 lg:block" />
           <div className="pointer-events-none absolute right-8 top-8 h-28 w-28 rounded-full bg-emerald-300/20 blur-2xl" />
 
-          <div className="relative rounded-[2rem] border border-zinc-200 bg-zinc-950 p-5 text-white shadow-2xl shadow-zinc-300/80 sm:p-6">
-            <div className="flex items-center justify-between border-b border-white/10 pb-5">
+          <div className="terminal-window">
+            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-300">
-                  Delivery system
+                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  ebube@portfolio
                 </p>
-                <p className="mt-2 text-sm text-zinc-400">Ebube Agwaze / Lead Software Engineer</p>
+                <p className="mt-1 font-mono text-xs text-zinc-500">~/engineering-profile</p>
               </div>
               <div className="flex gap-1.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                <span className="h-2.5 w-2.5 rounded-full bg-zinc-600" />
-                <span className="h-2.5 w-2.5 rounded-full bg-zinc-600" />
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-amber-300" />
+                <span className="h-3 w-3 rounded-full bg-emerald-400" />
               </div>
             </div>
 
-            <div className="mt-6 grid gap-3">
-              {deliverySignals.map((signal, index) => {
-                const Icon = signal.icon;
+            <div className="space-y-5 p-5 font-mono text-sm sm:p-6">
+              <div className="terminal-line animate-rise [animation-delay:280ms]">
+                <span className="terminal-prompt">$</span>
+                <span className="terminal-command">init engineer-profile --production</span>
+              </div>
 
-                return (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                {terminalLines.map((line, index) => (
                   <div
-                    key={signal.label}
-                    className="console-row animate-rise"
-                    style={{ animationDelay: `${360 + index * 110}ms` }}
+                    key={line.command}
+                    className="terminal-block animate-rise"
+                    style={{ animationDelay: `${380 + index * 120}ms` }}
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-emerald-300">
-                      <Icon aria-hidden="true" />
+                    <div className="terminal-line">
+                      <span className="terminal-prompt">$</span>
+                      <span className="terminal-command">{line.command}</span>
                     </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white">{signal.label}</p>
-                      <p className="mt-1 text-sm leading-6 text-zinc-400">{signal.value}</p>
-                    </div>
+                    <p className="terminal-output">{line.output}</p>
                   </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-6 rounded-3xl border border-white/10 bg-white/[0.04] p-5">
-              <div className="mb-4 flex items-center justify-between gap-4">
-                <p className="text-sm font-semibold text-white">Release confidence</p>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
-                  <FiCheckCircle aria-hidden="true" />
-                  Production-minded
-                </span>
+                ))}
               </div>
 
-              <div className="space-y-3">
-                <div className="progress-track">
-                  <span className="progress-fill w-[92%]" />
-                </div>
-                <div className="progress-track">
-                  <span className="progress-fill w-[78%] [animation-delay:180ms]" />
-                </div>
-                <div className="progress-track">
-                  <span className="progress-fill w-[86%] [animation-delay:320ms]" />
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-5 grid grid-cols-3 gap-3 text-center">
-              <div className="mini-stat">
-                <p>5+</p>
-                <span>Years</span>
-              </div>
-              <div className="mini-stat">
-                <p>Web</p>
-                <span>Systems</span>
-              </div>
-              <div className="mini-stat">
-                <p>Mobile</p>
-                <span>Shipped</span>
+              <div className="terminal-status animate-rise [animation-delay:900ms]">
+                <span className="terminal-cursor" />
+                <span>available_for = &quot;software engineering roles&quot;</span>
               </div>
             </div>
           </div>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Potlock project preview">
+  <rect width="1200" height="760" rx="28" fill="#fffaf5"/>
+  <rect x="34" y="34" width="1132" height="692" rx="24" fill="#ffffff" stroke="#f2c7a2"/>
+  <g font-family="Arial, sans-serif">
+    <text x="70" y="92" fill="#111827" font-size="28" font-weight="800">🍲 POTLOCK</text>
+    <text x="258" y="92" fill="#111827" font-size="18" font-weight="700">Projects</text>
+    <text x="358" y="92" fill="#737373" font-size="18">Campaigns</text>
+    <text x="482" y="92" fill="#737373" font-size="18">Pots</text>
+    <text x="560" y="92" fill="#737373" font-size="18">Feed</text>
+    <rect x="70" y="132" width="1060" height="246" rx="16" fill="#fff2e8" stroke="#fdba74"/>
+    <text x="104" y="194" fill="#e11d48" font-size="18" font-weight="700">Opening funding up for anything</text>
+    <text x="104" y="262" fill="#0f172a" font-size="46" font-weight="700">Discover ideas, projects, people,</text>
+    <text x="104" y="318" fill="#0f172a" font-size="46" font-weight="700">opportunities, and grant pools to fund.</text>
+    <rect x="104" y="350" width="148" height="42" rx="8" fill="#e9344d" stroke="#111827" stroke-width="2"/>
+    <text x="128" y="377" fill="#ffffff" font-size="16" font-weight="700">Donate Randomly</text>
+    <rect x="282" y="350" width="146" height="42" rx="8" fill="#fffaf5" stroke="#111827" stroke-width="2"/>
+    <text x="314" y="377" fill="#111827" font-size="16" font-weight="700">View Project</text>
+    <text x="104" y="430" fill="#e11d48" font-size="28">$210,912.7</text>
+    <text x="220" y="429" fill="#737373" font-size="16">Donated</text>
+    <text x="324" y="430" fill="#e11d48" font-size="28">7,290</text>
+    <text x="395" y="429" fill="#737373" font-size="16">Donations</text>
+    <line x1="70" y1="460" x2="1130" y2="460" stroke="#e5e7eb"/>
+    <text x="70" y="520" fill="#27272a" font-size="18" letter-spacing="2">FEATURED CAMPAIGNS</text>
+    <text x="250" y="520" fill="#27272a" font-size="18">2/4</text>
+    <rect x="70" y="548" width="760" height="150" rx="14" fill="#161026"/>
+    <rect x="70" y="548" width="760" height="150" rx="14" fill="url(#cardGlow)" opacity=".85"/>
+    <text x="96" y="628" fill="#ffffff" font-size="30" font-weight="800">Solana NEAR Intents Yappers</text>
+    <text x="96" y="668" fill="#ffffff" font-size="18" font-weight="700">FOR solyaps.near  |  ORGANIZED BY POTLOCK Growth</text>
+    <text x="886" y="568" fill="#66b80f" font-size="18" font-weight="800">Goal Achieved</text>
+    <text x="1006" y="568" fill="#111827" font-size="18">160.7309 / 146 NEAR</text>
+    <rect x="886" y="590" width="244" height="14" rx="7" fill="#75c914"/>
+    <text x="886" y="646" fill="#27272a" font-size="17" font-weight="800">ONGOING</text>
+    <text x="1080" y="646" fill="#66b80f" font-size="18" font-weight="800">&gt; 100%</text>
+    <text x="886" y="690" fill="#27272a" font-size="18">Campaign funding for content bounties,</text>
+    <text x="886" y="718" fill="#27272a" font-size="18">public goods, and ecosystem adoption.</text>
+  </g>
+  <defs>
+    <linearGradient id="cardGlow" x1="70" x2="830" y1="548" y2="698" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4c1d95"/>
+      <stop offset=".55" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+</svg>
